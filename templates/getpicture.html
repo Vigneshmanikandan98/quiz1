@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+   <head>
+      <style>
+		h1{text-align: center;}
+         div{text-align: center;}
+
+      </style>
+      </head>
+   <body style="background-color:burlywood;">   
+      <h1>Vignesh Manikandan - 1002012757</h1> 
+      <br>
+      <div>
+         <a href="/">Home Page</a>
+      </div>   
+   <br> <br>
+      <br> <br>
+      <div>
+         {% for col in rows %} 
+         <br>
+         {{col[0]}}    
+         <br>
+            <img style="height: 150px"  src="static/{{col[3]}}" alt="No Image Found">
+         <br>
+            {% endfor %}
+</div>
+      <br>
+     
+   </body>
+</html>

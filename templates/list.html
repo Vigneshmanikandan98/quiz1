@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+   <head>
+      <style>
+      #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      #customers td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      
+      #customers tr:nth-child(even){background-color: #f2f2f2;}
+      
+      #customers tr:hover {background-color: #ddd;}
+      
+      #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #436283;
+        color: white;
+      }
+			h1{text-align: center;}
+         div{text-align: center;}
+      </style>
+      </head>
+   <body style="background-color:burlywood;">   
+      <h1>Vignesh Manikandan</h1> 
+		 <h1>12757</h1>		
+      <br>
+      <div>
+         <a href="/">Home Page</a>
+      </div>   
+   <br> <br>
+      <br> <br>
+      <div>
+      <table id='customers'>
+         <tr>
+            <td><b>Num</b></td>
+            <td><b>Name</b></td>
+            <td><b>Year</b></td>
+            <td><b>Picture</b></td>
+            <td><b>Comments</b></td> 
+         </tr>
+         {% for col in rows %}
+         <tr>
+            <td>{{col[0]}}</td>
+            <td>{{col[1]}}</td>
+            <td> {{ col[2]}}</td>
+            <td><img style="height: 150px"  src="static/{{col[3]}}" alt="No Image Found"></td> 
+            <td> {{col[4]}}</td>
+         </tr>
+         {% endfor %}
+      </table>
+</div>
+      <br>
+     
+   </body>
+</html>
